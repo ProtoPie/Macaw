@@ -105,9 +105,9 @@ class RenderUtils {
             return MBezierPath(roundedRect: round.rect.toCG(), byRoundingCorners:
                                 MRectCorner.allCorners, cornerRadii: corners)
         } else if let arc = locus as? Arc {
-            if arc.ellipse.rx == arc.ellipse.ry {
+//            if arc.ellipse.rx == arc.ellipse.ry {
                 return arcToPath(arc)
-            }
+//            }
         } else if let point = locus as? Point {
             let path = MBezierPath()
             path.move(to: CGPoint(x: CGFloat(point.x), y: CGFloat(point.y)))
